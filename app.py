@@ -1,10 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from ultralytics import YOLO
 import os
 import uuid
 
 
 app = Flask(__name__)
+
 
 model = YOLO("best.tflite")
 
@@ -16,10 +17,11 @@ def predict_image(image_path, img_size=256, save=True, save_dir="prediction_resu
 
 
 def predict_video(video_path, img_size=256, save=True, save_dir="prediction_results", conf_threshold=0.30, stream=True):
+    # suffix, fourcc = '.mp4', 'avc1'
     results = model.predict(video_path, imgsz=img_size, save=save, name=save_dir, conf=conf_threshold, stream=stream)
     results_list = list(results)  # Convert generator to list
-    for frame in results_list:
-        print(frame.names)
+    for fram in results_list:
+        print(fram.names)
     return results_list
 
 
@@ -61,7 +63,7 @@ def predict_video_endpoint():
         if not os.path.exists(predicted_video_path):
             return jsonify({'status': "fail", 'message': f"File not found: {predicted_video_path}"}), 500
 
-        return jsonify({'status': "success", 'predicted_video_path': predicted_video_path})
+        return send_file(predicted_video_path, mimetype='video/mp4', as_attachment=True)
 
 
 @app.route("/api/predict/image", methods=["POST"])
@@ -88,8 +90,7 @@ def predict_image_endpoint():
         if not os.path.exists(predicted_image_path):
             return jsonify({'status': "fail", 'message': "Predicted image file not found"}), 500
 
-        return jsonify({'status': "success", 'predicted_image_path': predicted_image_path})
-
+        return send_file(predicted_image_path, mimetype='image/jpeg', as_attachment=True)
 
 if __name__ == "__main__":
     os.makedirs("uploads", exist_ok=True)
