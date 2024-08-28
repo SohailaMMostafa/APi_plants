@@ -1,18 +1,22 @@
 Plant Disease Detection using YOLOv8.
 
-This repository contains code for an API built with Flask and the final weights of a fine-tuned YOLOv8 model on the PlantVillage dataset for detecting diseases in tomato, potato, and pepperbell plants. The primary goal of this project is to provide an effective solution for early detection of plant diseases, enabling farmers and researchers to take timely preventive measures.
+This repository contains code for an API built with Flask and the final weights of a fine-tuned YOLOv8 model on the PlantVillage dataset for detecting diseases in plants like tomato, potato, and bell pepper. The model's classes are labeled in Arabic, making it easier for users familiar with the language to understand and work with the results
 
 Introduction:
 
-Early detection of plant diseases is crucial for maintaining healthy crops and maximizing yield. This project uses the YOLOv8 (You Only Look Once, Version 8) object detection algorithm to identify diseases in tomato, potato, and pepperbell plants. The model is fine-tuned on the PlantVillage dataset, which contains images of various plant diseases.
+Early detection of plant diseases is crucial for maintaining healthy crops and maximizing yield. This project uses the YOLOv8 (You Only Look Once, Version 8) object detection algorithm to identify diseases in plants such as tomatoes, potatoes, and bell peppers. The model is fine-tuned on the PlantVillage dataset, which contains images of various plant diseases, and the classes are labeled in Arabic for easier understanding.
 
 Dataset:
 
-The model is trained on the PlantVillage dataset, which is a large, publicly available collection of high-quality images of healthy and diseased plant leaves. The dataset includes different types of diseases for crops such as tomato, potato, and pepperbell, making it ideal for training robust deep learning models for disease detection.
+The model is trained on the PlantVillage dataset, a large, publicly available collection of high-quality images of healthy and diseased plant leaves. The dataset includes different types of diseases for crops such as الطماطم (Tomato), البطاطس (Potato), and الفلفل (Bell Pepper), making it ideal for training robust deep learning models for disease detection.
 
 Model:
 
-The YOLOv8 model is a state-of-the-art deep learning architecture for object detection tasks. It is fine-tuned on the PlantVillage dataset for detecting plant diseases in real-time.
+The YOLOv8 model is a state-of-the-art deep learning architecture for object detection tasks. It is fine-tuned on the PlantVillage dataset for detecting plant diseases in real-time. The classes in the model are labeled in Arabic as follows:
+
+طماطم (Tomato)
+بطاطس (Potato)
+فلفل (Bell Pepper)
 
 Advantages of YOLOv8:
 
@@ -28,9 +32,9 @@ Ease of Use: The architecture of YOLOv8 is user-friendly, making it easy to fine
 
 Results:
 
-Below are some sample results of the YOLOv8 model's performance on the PlantVillage dataset:
-![Picture2](https://github.com/user-attachments/assets/1eaa09cf-e15d-4d98-bff0-6f814e17bd39)
+Below are some sample results of the YOLOv8 model's performance on the PlantVillage dataset, with disease names displayed in Arabic
+![Picture1](https://github.com/user-attachments/assets/c76d0f59-838f-40bd-9ab2-163c59cc39fc)
 
-![Picture1](https://github.com/user-attachments/assets/f50ce288-7c36-4b5c-aec2-cf608de10fbb)
+![Picture2](https://github.com/user-attachments/assets/acd4d202-04bd-4e28-912f-a6130d66e093)
 
 The images show the model's ability to detect various plant diseases accurately and quickly.
