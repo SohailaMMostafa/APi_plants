@@ -9,7 +9,6 @@ This repository contains code for an API built with Flask and the final weights 
 3. [Model](#model)
 4. [Advantages of YOLOv8](#advantages-of-yolov8)
 5. [Results](#results)
-6. [Contributing](#contributing)
 
 ## Introduction
 
@@ -44,7 +43,3 @@ The YOLOv8 model is a state-of-the-art deep learning architecture for object det
 Below are some sample results of the YOLOv8 model's performance on the PlantVillage dataset, with disease names displayed in Arabic:
 ![Picture1](https://github.com/user-attachments/assets/2dd2fcdf-0330-407a-8918-522dedc6e4ff)
 ![Picture2](https://github.com/user-attachments/assets/083c863a-16ed-43c2-a80b-3c6b363a125a)
-
-
-## Contributing
-Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
